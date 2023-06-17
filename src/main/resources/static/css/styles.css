@@ -1,0 +1,24 @@
+.bg-capa { 
+    background-image: url(../img/capa.jpg);
+    background-size:auto;
+    background-position: center;
+
+
+    
+}
+.bg-capafilme{
+    background-image: url(../img/capasenhordosaneis.jpg);
+    background-size:cover;
+    background-position: center;
+
+}
+.bg-image{
+    background-image: url(../img/em_construcao1-1024x458.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+.card-img-small {
+    width: 70px; /* Defina a largura desejada */
+    height: 150px; /* A altura será ajustada automaticamente para manter a proporção */
+  }

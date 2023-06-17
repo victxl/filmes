@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <title>Filmes</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div th:replace="base :: navbar"></div>
+
+  <main class="bg-capa">
+    <br>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <div class="card">
+            <div class="card-body">
+              <!-- Seu conteúdo aqui -->
+              <div class="container mt-4">
+                <h1>Lista de Filmes</h1>
+
+               
+
+                <div class="card mb-3" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="../img/capasenhordosaneis.jpg" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title" id="titulo">O Senhor dos Anéis: A Sociedade do Anel</h5>
+                      <p class="card-text" id="direcao">Direção: Peter Jackson</p>
+                      <p class="card-text" id="genero">Gênero: Aventura, Fantasia</p>
+                      <p class="card-text" id="distribuidora">Distribuidora: New Line Cinema</p>
+                      <p class="card-text" id="produtora">Produtora: WingNut Films</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card mb-3" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="../img/capapoderosochefao.jpg" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title" id="titulo">O Poderoso Chefão</h5>
+                        <p class="card-text" id="direcao">Direção: Francis Ford Coppola</p>
+                        <p class="card-text" id="genero">Gênero: Crime, Drama</p>
+                        <p class="card-text" id="distribuidora">Distribuidora: Paramount Pictures</p>
+                        <p class="card-text" id="produtora">Produtora: Paramount Pictures</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="card mb-3" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="../img/capatempodeviolencia.jpg" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title" id="titulo">Tempo de Violência</h5>
+                        <p class="card-text" id="direcao">Direção: Quentin Tarantino</p>
+                        <p class="card-text" id="genero">Gênero: Crime, Drama</p>
+                        <p class="card-text" id="distribuidora">Distribuidora: Miramax Films</p>
+                        <p class="card-text" id="produtora">Produtora: A Band Apart, Miramax Films</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                
+                  <!-- Adicione mais colunas conforme necessário para exibir mais filmes -->
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+  </main>
+  <footer th:replace="base :: footer">
+
+
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
