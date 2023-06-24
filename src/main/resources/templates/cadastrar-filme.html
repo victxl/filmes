@@ -30,7 +30,7 @@
               <br>
               <div>
                 <h1>Cadastrar Novo Filme</h1>
-                <form class="needs-validation" novalidate>
+                <form method="POST">
                   <div class="row mb-3">
                     <label for="titulo" class="col-sm-2 col-form-label">Título:</label>
                     <div class="col-sm-10">
@@ -70,7 +70,7 @@
                   <div class="row mb-3">
                     <label for="ano" class="col-sm-2 col-form-label">Ano:</label>
                     <div class="col-sm-10">
-                      <input type="date" class="form-control" id="ano" name="ano" placeholder="Digite o ano de lançamento do filme" required>
+                      <input type="number" class="form-control" id="ano" name="ano" placeholder="Digite o ano de lançamento do filme" required>
                       <div class="invalid-feedback">
                         Por favor, digite o ano de lançamento do filme.
                       </div>
@@ -79,7 +79,7 @@
                   <div class="row mb-3">
                     <label for="duracao" class="col-sm-2 col-form-label">Duração:</label>
                     <div class="col-sm-10">
-                      <input type="time" class="form-control" id="duracao" name="duracao" placeholder="Digite a duração do filme" required>
+                      <input type="number" class="form-control" id="duracao" name="duracao" placeholder="Digite a duração do filme" required>
                       <div class="invalid-feedback">
                         Por favor, digite a duração do filme.
                       </div>
