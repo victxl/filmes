@@ -30,63 +30,70 @@
               <br>
               <div>
                 <h1>Cadastrar Novo Filme</h1>
-                <form method="POST">
-                  <div class="row mb-3">
-                    <label for="titulo" class="col-sm-2 col-form-label">Título:</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Digite o título do filme" required>
-                      <div class="invalid-feedback">
-                        Por favor, digite o título do filme.
+                <form class="mt-5" method="POST">
+                  <div class="row">
+                    <!-- título do filme -->
+                    <div class="col-12 col-md-7">
+                      <div class="mb-3">
+                        <label for="titulo" class="form-label">Título do filme</label>
+                        <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Título do filme em português" required />
                       </div>
                     </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label for="genero" class="col-sm-2 col-form-label">Gênero:</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control" id="genero" name="genero" placeholder="Digite o gênero do filme" required>
-                      <div class="invalid-feedback">
-                        Por favor, digite o gênero do filme.
+                    
+                    <!-- título do filme -->
+                    <div class="col-12 col-md-5">
+                      <div class="mb-3">
+                        <label for="diretor" class="form-label">Direção</label>
+                        <input type="text" class="form-control" id="diretor" name="diretor" placeholder="Nome do diretor principal do filme" required />
                       </div>
                     </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label for="distribuidora" class="col-sm-2 col-form-label">Distribuidora:</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control" id="distribuidora" name="distribuidora" placeholder="Digite a distribuidora do filme" required>
-                      <div class="invalid-feedback">
-                        Por favor, digite a distribuidora do filme.
+                    
+                    <!-- gênero -->
+                    <div class="col-12 col-md-8">
+                      <div class="mb-3">
+                        <label for="genero" class="form-label">Gênero</label>
+                        <input type="text" class="form-control" id="genero" name="genero" placeholder="Gênero do filme" />
                       </div>
                     </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label for="produtora" class="col-sm-2 col-form-label">Produtora:</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control" id="produtora" name="produtora" placeholder="Digite a produtora do filme" required>
-                      <div class="invalid-feedback">
-                        Por favor, digite a produtora do filme.
+                    
+                    <!-- ano -->
+                    <div class="col-12 col-md-2">
+                      <div class="mb-3">
+                        <label for="ano" class="form-label">Ano de lançamento</label>
+                        <input type="number" class="form-control" id="ano" name="ano" placeholder="Ano" />
                       </div>
                     </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label for="ano" class="col-sm-2 col-form-label">Ano:</label>
-                    <div class="col-sm-10">
-                      <input type="number" class="form-control" id="ano" name="ano" placeholder="Digite o ano de lançamento do filme" required>
-                      <div class="invalid-feedback">
-                        Por favor, digite o ano de lançamento do filme.
+                    
+                    <!-- duração -->
+                    <div class="col-12 col-md-2">
+                      <div class="mb-3">
+                        <label for="duracao" class="form-label">Duração em minutos</label>
+                        <input type="number" class="form-control" id="duracao" name="duracao" placeholder="Duração" />
                       </div>
                     </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label for="duracao" class="col-sm-2 col-form-label">Duração:</label>
-                    <div class="col-sm-10">
-                      <input type="number" class="form-control" id="duracao" name="duracao" placeholder="Digite a duração do filme" required>
-                      <div class="invalid-feedback">
-                        Por favor, digite a duração do filme.
+                    
+                    <!-- produtora -->
+                    <div class="col-12 col-md-6">
+                      <div class="mb-3">
+                        <label for="produtora" class="form-label">Produtora</label>
+                        <input type="text" class="form-control" id="produtora" name="produtora" placeholder="Produtora" />
                       </div>
                     </div>
+                    
+                    <!-- distribuidora -->
+                    <div class="col-12 col-md-6">
+                      <div class="mb-3">
+                        <label for="distribuidora" class="form-label">Distribuidora</label>
+                        <input type="text" class="form-control" id="distribuidora" name="distribuidora" placeholder="Distribuidora" />
+                      </div>
+                    </div>
+        
+                    <!-- botão -->
+                    <div class="col mt-5">
+                      <button type="submit" class="btn btn-info">Cadastrar filme</button>
+                    </div>
+        
                   </div>
-                  <br>
-                  <button type="submit" class="btn btn-primary">Cadastrar</button>
                 </form>
               </div>
               

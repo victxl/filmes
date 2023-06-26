@@ -1,97 +1,65 @@
 <!doctype html>
 <html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spring Filmes</title>
 
-<head>
-  <title>Title</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="css/style.css" type="text/css">
-  <!-- Bootstrap CSS v5.2.1 -->
-  
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
- 
-</head>
+    <!-- css bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
-<body>
-  <div class="container mt-5">
-    <h1 class="text-center">Bingo - Marcação de Números</h1>
-    <h4 class="text-center">Total de 90 números</h4>
-    <div class="row">
-      <div class="col-md-6 offset-md-3">
-        <div class="card p-3">
-          <h5 class="text-center">Números Sorteados</h5>
-          <div class="row">
-            <div class="col-3">
-              <button class="btn btn-outline-primary btn-block" onclick="markNumber(1)">1</button>
+    <!-- meu css -->
+    <link href="css/estilo.css" rel="stylesheet" type="text/css" />
+
+    <!-- favicon -->
+    <link href="../imagens/movies_icon.png" rel="icon" type="images/png" />
+  </head>
+  <body data-bs-theme="dark">
+    <!-- header -->
+    <header th:include="base :: header"></header>
+
+    <!-- main -->
+    <main>
+        <div class="container mt-100">
+            <h1>Lista de filmes</h1>
+            <hr />
+            <div class="row mt-5 mb-5">
+                <div class="col-12 col-md-4 mb-5" th:each="filme : ${filmes}">
+                    <h3><span th:text="${filme.titulo}"></span></h3>
+                    <hr />
+                    <p><b>Código do filme: </b><span th:text="${filme.codigoFilme}"></span></p>
+                    <p><b>Direção: </b><span th:text="${filme.diretor}"></span></p>
+                    <p><b>Gênero: </b><span th:text="${filme.genero}"></span></p>
+                    <p><b>Ano: </b><span th:text="${filme.ano}"></span></p>
+                    <p><b>Duração: </b><span th:text="${filme.duracao}"></span></p>
+                    <p><b>Produtora: </b><span th:text="${filme.produtora}"></span></p>
+                    <p><b>Distribuidora: </b><span th:text="${filme.distribuidora}"></span></p>
+                    
+                    <div class="row mb-5">
+                    
+                    <div class="col mt-5">
+                      
+                      <a class="btn btn-info" th:href="${(#mvc.url('FC#formAlterarFilme').arg(0,filme.codigoFilme).build())}" role="button">Alterar</a>
+
+                    </div>
+                    
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
             </div>
-            <div class="col-3">
-              <button class="btn btn-outline-primary btn-block" onclick="markNumber(2)">2</button>
-            </div>
-            <div class="col-3">
-              <button class="btn btn-outline-primary btn-block" onclick="markNumber(3)">3</button>
-            </div>
-            <div class="col-3">
-              <button class="btn btn-outline-primary btn-block" onclick="markNumber(4)">4</button>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-3">
-              <button class="btn btn-outline-primary btn-block" onclick="markNumber(5)">5</button>
-            </div>
-            <div class="col-3">
-              <button class="btn btn-outline-primary btn-block" onclick="markNumber(6)">6</button>
-            </div>
-            <div class="col-3">
-              <button class="btn btn-outline-primary btn-block" onclick="markNumber(7)">7</button>
-            </div>
-            <div class="col-3">
-              <button class="btn btn-outline-primary btn-block" onclick="markNumber(8)">8</button>
-            </div>
-          </div>
-          <!-- Adicione mais botões de números aqui -->
         </div>
-      </div>
-    </div>
-  </div>
+    </main>
 
-  <script>
-    var markedNumbers = []; // Array para armazenar os números marcados
+    <!-- footer -->
+    <footer th:replace="base :: footer"></footer>
+    
+    <!-- js bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
-    function markNumber(number) {
-      var index = markedNumbers.indexOf(number); // Verifica se o número já foi marcado
-
-      if (index > -1) {
-        // Se o número já foi marcado, remove-o do array
-        markedNumbers.splice(index, 1);
-      } else {
-        // Se o número não foi marcado, adiciona-o ao array
-        markedNumbers.push(number);
-      }
-
-      var button = document.getElementById("number" + number);
-
-      if (button.classList.contains("btn-primary")) {
-        // Altera a classe CSS do botão para indicar que está marcado
-        button.classList.remove("btn-primary");
-        button.classList.add("btn-secondary");
-      } else {
-        // Altera a classe CSS do botão para indicar que não está marcado
-        button.classList.remove("btn-secondary");
-        button.classList.add("btn-primary");
-      }
-
-      console.log("Números marcados: " + markedNumbers);
-    }
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-  </script>
-</body>
-
+  </body>
 </html>
